@@ -1,0 +1,29 @@
+@if(isAddingtask)
+{
+    <app-new-task (cancel)="onCancelAddTask()" (add)="onAddTask($event)"/>
+}
+<section>
+    <div class="flex items-center justify-between gap-4">
+        <!-- <img [src]="imageNewPath" alt="alt-img" class="h-10 w-10 rounded-full"> -->
+        <p>{{ name }}'s Tasks </p>
+        
+        <button class="bg-sky-500 p-2 rounded-md shadow-md" (click)="onAddcomplete()">Add Tasks</button>
+       
+    </div>
+    
+<ul>
+    @if(selecteduserTask.length!==0)
+    {
+   @for (task of selecteduserTask; track task.id) {
+    <li>
+        <app-task-basic [task]="task" (complete)="onCompletetask($event)"> </app-task-basic>
+    </li>
+}
+   }
+   @else{
+    <h2>Opps Task not found</h2>
+   }
+</ul>
+
+</section> 
+

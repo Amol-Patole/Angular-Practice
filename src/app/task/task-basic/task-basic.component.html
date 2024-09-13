@@ -1,0 +1,14 @@
+<section>
+    <div class="basic-task1">
+        <ul type="none">
+            <li>'Title is '{{task.title}}</li>
+            <li>{{task.dueDate | date}}</li>
+            <li> {{task.summary}}</li>
+            <li> {{task.id}}</li>
+            <li> {{task.dueDate}}</li>
+        </ul>
+    </div>
+    <div class="basic-button">
+        <button class="p-2 bg-sky-400 rounded-md" (click)="onCompleteTask()">Complete</button>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+section
+{
+ height: 50%;
+ width: 150%;
+ border: 1px solid black;
+ background-color: skyblue;
+}
+.basic-button
+{
+   display: flex;
+   justify-content: end;
+}
+ul
+{
+   color: red;
+   /* background-color: aquamarine; */
+   text-shadow: 10pc;
+}
